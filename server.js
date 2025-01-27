@@ -32,11 +32,11 @@ app.use(express.static("public"));
 
 
 const db=new Client({
-  user: "postgres",
-  host: "localhost",
+  user: process.env.DATABASE_USER,
+  host: process.env.DATABASE_HOST,
   database: process.env.DATABASE_NAME, // Fixed here
   password: process.env.DATABASE_PWD,
-  port: 5432,
+  port: process.env.DATABASE_PORT,
 
 });
 
