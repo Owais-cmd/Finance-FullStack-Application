@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "api":"nodemon api.js",
-    "start": "nodemon server.js",
+    "api":"node api.js",
+    "start": "node server.js",
     "all": "npm-run-all --parallel start api"
   },
   "author": "Owais",
