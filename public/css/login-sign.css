@@ -1,0 +1,92 @@
+/* CSS Styling for Login Form */
+body {
+    background-color: #E1FFBB; /* Light background for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+span{
+    color: rgb(138, 211, 29);
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff; /* White background for the form */
+    padding: 2rem;
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #00000030; /* Subtle shadow */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form Heading */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333; /* Neutral heading color */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555; /* Muted label color */
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 0.8rem;
+    height: 2.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #009990; /* Highlight border with theme color */
+    outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #009990; /* Theme color for button */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #007d7d; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,136 @@
+<%- include("partials/header.ejs")%>
+<div class="container1">
+  <h2 class="mainh">Welcome Back <%=locals.Name%></h2>
+
+  <form id="filterForm" method="post" action="/">
+    <input type="hidden" id="filterType" name="filterType" value="all">
+    <button type="submit" 
+            class="filter-btn <%= FilterType === 'all' ? 'active' : 'inactive' %>" 
+            onclick="setFilterType('all')">All</button>
+
+        <button type="submit" 
+            class="filter-btn <%= FilterType === 'month' ? 'active' : 'inactive' %>" 
+            onclick="setFilterType('month')">Month</button>
+
+        <button type="submit" 
+            class="filter-btn <%= FilterType === 'year' ? 'active' : 'inactive' %>" 
+            onclick="setFilterType('year')">Year</button>
+  </form>
+
+  <div class="pie">
+  <div id="chart-container1" >
+    <!-- Canvas for the Doughnut Chart -->
+    <canvas id="expenseChart" ></canvas>
+  </div>
+  <div id="chart-container2" >
+    <!-- Canvas for the Doughnut Chart -->
+    <canvas id="exVSinChart" ></canvas>
+  </div>
+ </div>
+
+ <br>
+ <br>
+
+  
+
+
+  <div class="tracker">
+    <section>
+<div class="flex-container">
+  <h2 class="heading">Your Income</h2>
+    <div>
+    <a href="/filter"><button class="Btn fetch">Filter</button></a>
+  <button type="submit"  class="Btn delete">Delete</button>
+  <button id="incomeBtn" class="Btn">Export to Excel</button>
+</div>
+</div>
+  <table class="styled-table">
+    <thead>
+    <tr>
+      <th>SI </th>
+      <th>Title</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th class="not "></th>
+
+    </tr>
+  </thead>
+
+    <% var i=1;
+    if(Income && Income.length>0) {
+        Income.forEach(element => {%>
+         <tr>
+          <td><%=i%></td>
+           <td><%= element.title%></td>  
+            <td><%=element.amount%></td>
+            <td><%= element.category%></td>  
+            <td><%=element.date.toLocaleDateString()%></td>
+            <td class="not">
+    <form action="/delete/income" method="POST">
+        <input type="hidden" name="id" value="<%= element.id %>">
+        <input type="checkbox" name="delete" class="noCss">
+    </form>
+</td>
+
+          </tr>
+       <% i++;
+       });
+       
+    }else{%>
+      <tr><td colspan="6">No records</td></tr>
+    <%}%>
+  </table>
+  </section>
+  <section>
+    
+<div class="flex-container">
+  <h2 class="heading">Your Expense</h2>
+    <div>
+    <a href="/filter"><button class="Btn fetch">Filter</button></a>
+  <button type="submit"  class="Btn delete">Delete</button>
+  <button id="exportBtn" class="Btn">Export to Excel</button>
+  </div>
+  </div>
+  <table class="styled-table">
+    <thead>
+    <tr>
+      <th>SI </th>
+      <th>Title</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th class="not "></th>
+    </tr>
+  </thead>
+
+    <% var i=1;
+    if(Expense && Expense.length>0) {
+        Expense.forEach(element => {%>
+         <tr>
+          <td><%=i%></td>
+           <td><%= element.title%></td>  
+            <td><%=element.amount%></td>
+            
+            <td><%= element.category%></td>  
+            <td><%=element.date.toLocaleDateString()%></td>
+            <td class="not">
+    <form action="/delete/expense" method="POST">
+        <input type="hidden" name="id" value="<%= element.id %>">
+        <input type="checkbox" name="delete" class="noCss">
+    </form>
+</td>
+
+          </tr>
+       <% i++;
+       });
+       
+    }else{%>
+
+        <tr><td colspan="6">No records</td></tr>
+    <%}%>
+  </table>
+  </section>
+  </div>
+</div>
+<%- include("partials/footer.ejs")%>

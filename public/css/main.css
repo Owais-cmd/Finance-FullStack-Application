@@ -1,0 +1,264 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #E1FFBB ;
+}
+
+.Btn{ 
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#exportBtn,#incomeBtn{
+    background-color: orange;
+    color: #faeeee;
+}
+
+footer{
+    margin-top: auto;
+}
+
+header{  
+    box-shadow: 10px 0px 10px #3498db ;
+    background-color: #009990;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    width: 50%;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    padding-top: 5px;
+    margin: 0;
+}
+
+footer{
+    width: 100%;
+    color: #f1f1f1;
+    background-color: #009990;
+    box-shadow: 10px 0px 10px #3498db ;
+}
+
+
+i{
+    font-size: 2.5rem;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f-1{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-2{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.container1{
+    width: 80%;
+    margin: auto;
+}
+
+.tracker{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.head{
+    color: greenyellow;
+}
+
+
+
+
+/* Table styling */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.styled-table thead tr {
+    background-color: #57a70c;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Alternating row colors */
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive table styling */
+@media screen and (max-width: 768px) {
+    .styled-table {
+        font-size: 14px;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pie{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .pie>*{
+        width: 100%;
+    }
+}
+
+.nav-btn{
+    padding: 10px 20px;
+    background-color: yellowgreen;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #afe766 ;
+}
+.fetch{
+    background-color: #3498db;
+    color: #faeeee;
+}
+
+.delete{
+    background-color:red;
+    color: #faeeee;
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.filter-btn .inactive {
+    background-color: #ddd;
+    color: #333;
+}
+
+.mainh{
+    font-size: 30px;
+}
+
+.heading{
+    
+    font-size: 24px;
+}
+
+#results {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+
+
+.not{
+    display: none;
+}
+
+.notShown{
+    display: table-cell;
+}
+
+.noCss {
+    /* Remove all default browser styles */
+    all: unset; /* Resets padding, margin, border, etc. */
+    display: inline-block;
+    width: 16px; /* Explicit width */
+    height: 16px; /* Explicit height */
+    border: 2px solid #3498db; /* Custom border */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Checkbox when checked */
+.noCss:checked {
+    background-color: #009990; 
+    border-color: #009990;
+}
+
+.pie{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    
+}
+
+.pie>*{
+    width: 40%;
+}

@@ -1,0 +1,105 @@
+#incomeOptionsContainer{
+    display: none;
+}
+
+#expenseOptionsContainer{
+    display: none;
+}
+span{
+    color: rgb(138, 211, 29);
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+body {
+    background-color: #E1FFBB; /* Light background for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* form styling */
+.form-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        input,
+        select {
+            width: 100%; /* Ensures both take full width */
+    padding: 0.8rem; /* Uniform padding */
+    height: 2.8rem; /* Explicit height */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in height */
+    -webkit-appearance: none; /* Remove browser default styling */
+    -moz-appearance: none;
+    appearance: none;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        /* Submit Button */
+      #button1 {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #009990;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #button1:hover {
+            background-color: #00998f9a;
+        }
+
+        /* Income Options (Hidden Initially) */
+        #incomeOptionsContainer {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+        }
+

@@ -1,0 +1,63 @@
+<%- include("partials/header.ejs")%>
+<div class="container1">
+  <h2>Welcome Back <%=locals.Name%></h2>
+
+<div class="flex-container">
+  <h3>Filtered <%=locals.Option%></h3>
+
+ <a href="/"><button class="Btn fetch">Remove Filter</button></a>
+</div>
+  <div class="tracker">
+    <section>
+  <table class="styled-table">
+    <tr>
+      <th>SI </th>
+      <th>Title</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th class="not "></th>
+
+    </tr>
+
+    <% var i=1;
+    if(Response&& Response.length>0) {
+        Response.forEach(element => {%>
+         <tr>
+          <td><%=i%></td>
+           <td><%= element.title%></td>  
+            <td><%=element.amount%></td>
+            <td><%= element.category%></td>  
+            <td><%=new Date(element.date).toLocaleDateString()%></td>
+            <td class="not">
+    
+</td>
+
+          </tr>
+       <% i++;
+       });
+       
+    }else{%>
+      <tr><td colspan="6">No records</td></tr>
+    <%}%>
+  </table>
+  </section>
+  
+  </div>
+</div>
+<footer>
+    <div class="container2">
+    <h2>follow us on</h2>
+    <div class="f-1">
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-instagram"></i>
+</div>
+<div class="f-2">
+    <p>Developed by Owais</p>
+    
+</div>
+</div>
+</footer>
+</body>
+</html>
