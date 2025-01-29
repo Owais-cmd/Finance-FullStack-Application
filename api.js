@@ -11,7 +11,8 @@ env.config();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 const { Client } = pg
-app.use(cors())
+app.use(cors({ origin: "https://finance-fullstack-application.onrender.com" }));
+
 
 const db=new Client({
     user: process.env.DATABASE_USER,

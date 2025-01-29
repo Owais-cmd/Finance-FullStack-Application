@@ -1,7 +1,7 @@
 // Ensure axios is included if not via CDN in HTML or npm installed
 // <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-
+const API_BASE_URL = "https://finance-fullstack-application.onrender.com";
 
 
 async function renderChart1() {
@@ -9,7 +9,7 @@ async function renderChart1() {
         const id=parseInt(ID);
 
         
-        const result = await axios.get(`http://localhost:4000/stats1?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
+        const result = await axios.get(`${API_BASE_URL}/stats1?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
         
         
          // Debugging
@@ -65,7 +65,7 @@ async function renderChart2() {
     try {
         // Fetch data from backend
         const id=parseInt(ID);
-        const result = await axios.get(`http://localhost:4000/stats2?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
+        const result = await axios.get(`${API_BASE_URL}/stats2?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
         
         
 
