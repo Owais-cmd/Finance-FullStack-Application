@@ -36,12 +36,16 @@ const db=new Client({
   host: process.env.DATABASE_HOST,
   database: process.env.DATABASE_NAME, // Fixed here
   password: process.env.DATABASE_PWD,
-  port: process.env.DATABASE_PORT,
-
+  port: Number(process.env.DATABASE_PORT) || 5432,
+  ssl: {
+    rejectUnauthorized: false,  // ✅ Required for cloud PostgreSQL (e.g., Render)
+  },
 });
 
 
-db.connect();
+db.connect()
+  .then(() => console.log("✅ Connected to PostgreSQL successfully"))
+  .catch(err => console.error("❌ PostgreSQL connection error:", err));
 
 app.get("/sign_up",async ( req,res)=>{
   res.render("sign_up.ejs");
