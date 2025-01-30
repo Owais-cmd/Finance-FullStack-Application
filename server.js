@@ -15,6 +15,9 @@ env.config();
 
 
 
+
+
+
 app.use(session(
   {
     secret:process.env.SESSION_SECRET,
@@ -145,6 +148,7 @@ app.get("/", async (req, res) => {
         startDate,
         endDate,
         Id: req.user.id,
+        API:process.env.API
       });
     } catch (err) {
       console.error(err);

@@ -8,8 +8,7 @@ async function renderChart1() {
     try {
         const id=parseInt(ID);
 
-        
-        const result = await axios.get(`http://localhost:4000/stats1?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
+        const result = await axios.get(`${api}/stats1?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
         
         
          // Debugging
@@ -65,7 +64,8 @@ async function renderChart2() {
     try {
         // Fetch data from backend
         const id=parseInt(ID);
-        const result = await axios.get(`http://localhost:4000/stats2?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
+
+        const result = await axios.get(`${api}/stats2?id=${id}&startDate=${StartDate}&endDate=${EndDate}`);
         
         
 
